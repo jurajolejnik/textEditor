@@ -17,7 +17,7 @@ public class TextEditorController {
         try {
             BufferedWriter bufferedWriter02 = new BufferedWriter(new FileWriter("dokument", true));
             strWriter = myTextFile.getText();
-            System.out.println(strWriter);
+          //  System.out.println(strWriter);
             bufferedWriter02.write(strWriter);
             bufferedWriter02.close();
 
@@ -30,9 +30,11 @@ public class TextEditorController {
 
         String strBuffer;
         String vystup = "";
+        File MojNovySubor = new File("Ondrej je strasne hlupy a nevie co je to Java");
         try {
             BufferedReader bufferedReader = new BufferedReader(new FileReader("dokument"));
-            while ((strBuffer = bufferedReader.readLine()) != null) {
+            while ((strBuffer = bufferedReader.readLine()) != null)
+            {
                 // System.out.println(strBuffer);
                 // myTextFile.setText(strBuffer);
                 vystup = vystup + strBuffer + "\n";
